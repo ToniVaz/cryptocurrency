@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300&display=swap');
+body {
+  background:rgba(255, 255, 255, 0.95);
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    'header header header header'
+    'tape tape tape tape'
+    'table-box table-box table-box sidebar'
+    'footer footer footer footer';
+  grid-gap: 5px;
+  font-weight: 900; 
+ height: 100vh;
+ font-family: 'Inter', sans-serif;
+}
+
+header{
+  background: rgb(119, 123, 133);
+  grid-area: header;
+  padding-left: 2%;
+  height: 6vh;
+  display: flex;
+  align-items: center;
+}
+header h2 a{
+  font-family: 'Fredoka One', cursive;
+  text-decoration: none;
+  color:aliceblue;
+}
+.tape{
+           display: flex;
+           grid-area: tape;
+           margin-bottom: 30px;
+           margin-top: 30px;
+           overflow: hidden;
+           height: 20px;
+           border: 1px solid rgb(204, 209, 221);
+  }
+
+.tape ul{
+  display: flex;
+ animation: tape  99s linear infinite;
+ margin: 0%;
+}
+.tape ul li{
+  width: 100px;
+  display: flex;
+list-style: none;
+align-items: center;
+justify-content: space-evenly;
+margin-right:5px;
+}
+
+@keyframes tape{
+  from{
+    margin-right: 100%;
+    color: red;
+  }
+  to{
+    margin-left: -150%;
+    color: blue;
+  }
+}
+
+.table-box {
+width: 73vw;
+grid-area: table-box;
+  overflow: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+
+}
+
+
+table {
+  width: 100%;
+  text-align: left;
+  
+}
+
+thead {
+background-color: rgb(141, 155, 141);
+position: sticky;
+z-index: 1;
+top: 0;
+}
+
+.name {
+  width: 34%;
+  margin-left: 1vh;
+}
+
+tr td {
+  border-bottom: 1px solid lightskyblue;
+}
+.first-data {
+  display: flex;
+  align-items: center;
+}
+
+.first-data img {
+  width: 30px;
+  height: 30px;
+  margin-right: 1vh;
+}
+
+.coin-symbol {
+  color: lightskyblue;
+  margin-left: 1vh;
+  text-transform: uppercase;
+}
+
+span {
+  color: lightskyblue;
+  margin-right: 1vh;
+}
+
+.sidebar {
+  display: flex; 
+  grid-area: sidebar;
+  background-color: cornflowerblue;
+  margin-right: 25px;
+  width: 280px;
+  background-position: center; 
+  border-radius: 2%;
+}
+
+  .sidebar-img{
+    width: 280px;
+    height: 400px;
+
+  }
+  .sidebar-img img{
+height: 410px;
+border-radius: 2%;
+
+  }
+
+   
+footer {
+  grid-area: footer;
+  margin-top: 50px;
+  background: rgb(119, 123, 133);
+  height: 70px;
+  display: flex;
+  justify-content: space-evenly ;
+  align-items: center;
+}
+
+.red{
+  color: red;
+}
+
+.green{
+  color: #16c784;
+}
+
+
+@media screen and (max-width: 768px){
+  
+.container {
+  display: grid;
+  grid-template-areas:
+    'header header header header'
+    'tape tape tape tape'
+    'table-box table-box table-box table-box'
+    'footer footer footer footer';
+  font-weight: 700; 
+  height: 100vh;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+}
+
+header{
+  grid-area: header;
+  justify-content: center;
+}
+.table-box{
+  width: 97vw;
+}
+.sidebar{
+display: none;
+}
+.footer{
+  grid-area: footer;
+  background: rgb(119, 123, 133);
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+}
+
+
+
+@media screen and (max-width: 480px){
+  
+  .container {
+    display: grid;
+    grid-template-areas:
+      'header header header header'
+    'tape tape tape tape'
+      
+      'table-box table-box table-box table-box'
+      'footer footer footer footer';
+    font-weight: 700; 
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    height: 100vh;
+
+  }
+  
+  header{
+    grid-area: header;
+    justify-content: center;
+  }
+  .tape{
+    grid-area: tape;
+    border: none;
+    height: 4vh;
+  }
+  table{
+    text-align: center;
+  }
+  .table-box{
+    width: 100%;
+    margin-left: 1%;
+}
+
+thead{
+  text-align: center;
+}
+
+
+.first-data img {
+  width: 20px;
+  height: 20px;
+  margin-right: 1vh;
+}
+.red, .green, .media{
+  display: none;
+}
+  .sidebar{
+  display: none;
+  }
+  footer{
+    grid-area: footer;
+    background: rgb(119, 123, 133);
+    height: 70px;
+    display: flex;
+    align-items: center;
+  }
+  footer h4{
+    display: none;
+  }
+
+  }
+
+
