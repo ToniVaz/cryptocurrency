@@ -149,10 +149,20 @@ footer {
   background: rgb(119, 123, 133);
   height: 70px;
   display: flex;
-  justify-content: space-evenly ;
   align-items: center;
 }
 
+footer h4{
+  width: 30vw;
+  display: flex;
+  justify-content: flex-end;
+
+}
+.container-a{
+  width: 70vw;
+  display: flex;
+   justify-content: space-around;
+}
 .red{
   color: red;
 }
@@ -258,14 +268,15 @@ thead{
   footer{
     grid-area: footer;
     background: rgb(119, 123, 133);
-    height: 10vh;
+    height: 20vh;
     display: flex;
-    align-items: center;
-    margin-bottom: 8vh;
+    flex-direction: column-reverse;
   }
   footer h4{
-    display: none;
+    width: 100vw;
+    justify-content: center;
   }
+ 
   }
 
 
