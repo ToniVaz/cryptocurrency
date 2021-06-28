@@ -24,7 +24,7 @@ export default function CustomizedTables({ coins }) {
             return (
               <tr>
                 <td className="first-data">
-                  <img src={i.image}></img>
+                  <img alt='img' src={i.image}></img>
                   <h2>{i.name}</h2>
                   <p className="coin-symbol">{i.symbol}</p>
                 </td>

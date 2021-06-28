@@ -42,7 +42,7 @@ function App() {
         .catch((err) => alert('ERROR', err));
     };
     getCoins();
-  }, []);
+  },);
 
   return (
    <Layout coins={coins}>
